@@ -2,10 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 
-import Header from './components/header/index';
+import LikeButton from './components/LikeButton/index';
 
 
 ReactDOM.render(
-  <Header />,
+  <LikeButton />,
   document.getElementById('appwrap')
 );
