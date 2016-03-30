@@ -1,6 +1,7 @@
 import React from 'react';
 const {Component} = React;
 
+
 class InputName extends Component {
     constructor() {
         super();
