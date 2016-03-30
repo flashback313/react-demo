@@ -12,13 +12,13 @@ class LikeButton extends React.Component {
             </p>
         );
     }
-    constructor(props) {
-        super(props);
-        this.state = {count: props.liked};
+    constructor() {
+        super();
+        this.state = {
+            liked: false
+        };
     }
     
 }
-LikeButton.propTypes = { liked: React.PropTypes.number };
-LikeButton.defaultProps = { liked: 0 };
 
 export default LikeButton;
