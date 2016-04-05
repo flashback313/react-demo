@@ -1,11 +1,10 @@
-import React from 'react';
-const {Component} = React;
+import React,{Component} from 'react';
 
 
 class InputName extends Component {
-    constructor() {
-        super();
-        this.state = {value: 'Hello!'}
+    constructor(props) {
+        super(props);
+        this.state = {value: this.props.defaultVal}
     }
     handleChange(event) {
         this.setState({value: event.target.value});

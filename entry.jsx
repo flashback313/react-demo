@@ -6,11 +6,11 @@ import {render} from 'react-dom';
 // import Avatar from './components/Avatar/index';
 // import InputName from './components/InputName/index';
 // import AddButton from './components/AddButton/index';
-// import AddBar from './components/AddBar/index';
-import TitleChange from './components/TitleChange/index';
+import AddBar from './components/AddBar/index';
+// import TitleChange from './components/TitleChange/index';
 
-var titleContext = "My Title Component";
+// var titleContext = "My Title Component";
 render(
-    <TitleChange title="My Title Component" />,
+    <AddBar />,
     document.getElementById('appwrap')
 );
