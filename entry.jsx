@@ -13,15 +13,22 @@ import todoApp from './reducers'
 // import TitleChange from './components/TitleChange/index';
 import App from './components/Todos/App'
 
-
-// render(
-//     <TitleChange title="My Title Component" />,
-//     document.getElementById('appwrap')
-// );
 let store = createStore(todoApp)
 render(
 	<Provider store={store}>
 		<App />
 	</Provider>,
-    document.getElementById('appwrap')
+	document.getElementById('appwrap')
 );
+// import AddBar from './components/AddBar/index';
+// import TitleChange from './components/TitleChange/index';
+
+// var titleContext = "My Title Component";
+// render(
+//     <AddBar />,
+//     document.getElementById('appwrap')
+// );
+// render(
+//     <TitleChange title="My Title Component" />,
+//     document.getElementById('appwrap')
+// );
