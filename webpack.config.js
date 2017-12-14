@@ -5,9 +5,11 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: './entry.jsx',
+    devtool: 'inline-source-map',
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'bundle.js'
+        filename: '[name].bundle.js',
+        chunkFilename: '[name].chuck.js',
     },
     module: {
         rules: [{
@@ -18,6 +20,9 @@ module.exports = {
     plugins: [
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development')
+        }),
+        new webpack.optimize.CommonsChunkPlugin({
+            name: 'common'
         }),
         new webpack.optimize.UglifyJsPlugin(),
         new webpack.HotModuleReplacementPlugin(),

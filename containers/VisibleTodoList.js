@@ -28,8 +28,14 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 const VisibleTodoList = connect(
-  mapStateToProps,
-  mapDispatchToProps
+  ({todos, visibilityFilter}) => {
+    console.log('connect is running')
+    return {
+      todos,
+      visibilityFilter
+    }
+  },
+  {onTodoClick: toggleTodo}
 )(TodoList)
 
 export default VisibleTodoList

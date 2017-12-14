@@ -1,40 +1,25 @@
-const todo = (state, action) => {
-  console.log('todo reducer');
-  switch (action.type) {
-    case 'ADD_TODO':
-      return {
-        id: action.id,
-        text: action.text,
-        completed: false
-      }
-    case 'TOGGLE_TODO':
-      if (state.id !== action.id) {
-        return state
+import { handleActions } from 'redux-actions'
+import { ADD_TODO, TOGGLE_TODO } from '../actions'
+
+const todos = handleActions({
+  [ADD_TODO]: (state, { payload }) => {
+    return [...state, {
+      id: payload.id,
+      text: payload.text,
+      completed: false
+    }]
+  },
+  [TOGGLE_TODO]: (state, action) => {
+    return state.map(t => {
+      if (t.id !== payload.id) {
+        return t
       }
 
-      return Object.assign({}, state, {
-        completed: !state.completed
+      return Object.assign({}, t, {
+        completed: !t.completed
       })
-    default:
-      return state
+    })
   }
-}
-
-const todos = (state = [], action) => {
-  console.log('todos reducer');
-  switch (action.type) {
-    case 'ADD_TODO':
-      return [
-        ...state,
-        todo(undefined, action)
-      ]
-    case 'TOGGLE_TODO':
-      return state.map(t =>
-        todo(t, action)
-      )
-    default:
-      return state
-  }
-}
+}, [])
 
 export default todos
