@@ -4,8 +4,8 @@ var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    entry: './entry.jsx',
-    devtool: 'inline-source-map',
+    entry: './src/index.js',
+    devtool: 'cheap-eval-source-map',
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].bundle.js',
@@ -27,7 +27,7 @@ module.exports = {
         new webpack.optimize.UglifyJsPlugin(),
         new webpack.HotModuleReplacementPlugin(),
         new HtmlWebpackPlugin({
-            template: 'index.html',
+            template: 'src/index.html',
         })
     ],
     devServer: {
