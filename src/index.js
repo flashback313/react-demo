@@ -1,5 +1,5 @@
-import React from 'react';
-import {render} from 'react-dom';
+import React from 'react'
+import {render} from 'react-dom'
 import { Provider } from 'react-redux'
 import { createStore, applyMiddleware, combineReducers } from 'redux'
 import * as todoApp from './apps/Todos/controls/reducer'
@@ -12,8 +12,8 @@ let createStoreWithMiddleware = applyMiddleware(testMiddleWare, test2MiddleWare)
 let store = createStoreWithMiddleware(combineReducers(todoApp))
 
 render(
-	<Provider store={store}>
-		<App />
-	</Provider>,
-	document.getElementById('appwrap')
-);
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('appwrap')
+)

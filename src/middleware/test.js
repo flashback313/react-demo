@@ -1,4 +1,4 @@
-export default function logger({ getState }) {
+export default function logger ({ getState }) {
   return (next) => (action) => {
     console.log('will dispatch', action)
 

@@ -4,8 +4,8 @@ const List = ({todoList, finishTodo, filter}) => (
   <ul>
     {
       todoList.map(todo => {
-        if (!todo.finished && filter === 'Compelete') return null;
-        if (todo.finished && filter === 'Todo') return null;
+        if (!todo.finished && filter === 'Compelete') return null
+        if (todo.finished && filter === 'Todo') return null
         return (
           <li
             style={todo.finished ? {'textDecorationLine': 'line-through'} : null}

@@ -19,7 +19,7 @@ export const todoList = handleActions({
           finished: !todo.finished
         }
       }
-      return todo;
+      return todo
     })
   }
 }, [])

@@ -9,4 +9,3 @@ export const addTodo = createAction(ADD_TODO, todo => todo)
 export const finishTodo = createAction(FINISH_TODO, todo => todo)
 
 export const onFilterChange = createAction(FILTER_CHANGE, filter => filter)
-
