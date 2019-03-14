@@ -8,7 +8,7 @@ const routes = (
   <div>
     <NavBar />
     <Switch>
-      <Route exact path="/" component={() => (<div>11111</div>)} />
+      <Route exact path="/" component={() => <ModuleA />} />
       <Route path="/a" component={() => (<div>aaaaaaa</div>)} />
       <Route path="/b" component={() => (<div>bbbbbbb</div>)} />
       <Route path="/c" component={() => (<div>ccccccc</div>)} />
