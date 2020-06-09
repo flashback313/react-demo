@@ -9,7 +9,10 @@ import configureStore, { history } from './utils/configureStore';
 
 import rootReducer from './commonRedux/reducer';
 import routes from './landing/routes';
+import Enzyme from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 
+Enzyme.configure({ adapter: new Adapter() });
 const store = configureStore();
 
 ReactDom.render(
